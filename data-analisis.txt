@@ -1,0 +1,92 @@
+ANALISIS DE DATOS - GOOGLE - COURSERA
+
+Los seis pasos del proceso de análisis de datos que has estado aprendiendo en este programa son: preguntar, preparar, procesar, analizar, compartir y actuar. 
+
+PREGUNTAR
+Hacer preguntas efectivas:
+
+¿Qué crees que necesitan aprender los nuevos empleados para tener éxito en su primer año de trabajo?
+¿Has recopilado datos de nuevos empleados antes? Si es así, ¿podemos tener acceso a los datos históricos?
+¿Crees que los gerentes con tasas de retención más altas ofrecen a los nuevos empleados algo adicional o único?
+¿Cuál sospechas que es una de las principales causas de insatisfacción entre los nuevos empleados?
+¿En qué porcentaje te gustaría que aumente la retención de empleados en el próximo ejercicio económico?
+
+PREPARAR
+
+Preparación sólida, cronograma, identificaro qué datos necesitaban para lograr el resultado exitoso que identificaron en el paso anterior.
+Desarrollar preguntas específicas. Establecer reglas respecto de quién tendría acceso a los datos recopilados
+determinaron qué información específica se recopilaría y la mejor manera de presentar los datos visualmente. Los analistas evaluaron los posibles problemas relacionados con el proyecto y los datos, y cómo evitarlos.
+
+PROCESAR
+Con el fin de mantener la confidencialidad y proteger y almacenar los datos de forma efectiva, el acceso se otorgó a un número limitado de analistas. La recopilación y el uso ético de los datos es una de las responsabilidades que tiene un analista de datos. Luego, se limpiaron los datos para garantizar que estuvieran completos, y fueran correctos y pertinentes. Algunos datos se agregaron y resumieron sin revelar las respuestas individuales. Los datos sin procesar se cargaron en un almacén de datos interno para obtener una capa de seguridad adicional.
+
+ANALIZAR
+Analizar los datos, descubrir y documentar.
+
+COMPARTIR
+Compartir cuidadosamente los datos brutos.
+
+ACTUAR
+ecidir cuál era la mejor manera de implementar los cambios y tomar medidas basadas en los hallazgos.
+
+___________________________________________________________________________
+
+Hacer preguntas y definir el problema.
+
+Preparar datos al recopilar y almacenar la información.
+
+Procesar los datos al limpiar y comprobar la información.
+
+Analizar los datos para encontrar patrones, relaciones y tendencias.
+
+Compartir datos con tu audiencia.
+
+Actuar en función de los datos y utilizar los resultados del análisis.
+
+INSTINTO
+El instinto es una comprensión intuitiva de algo con poca o ninguna explicación. No siempre es algo consciente; a menudo captamos señales sin siquiera darnos cuenta. Solo tienes la «sensación» de que es así.
+las decisiones basadas en el instinto, sin datos para respaldarlas, pueden generar errores.
+
+Además, intenta hacerte estas preguntas sobre un proyecto para encontrar el equilibrio perfecto:
+
+¿Qué tipo de resultados se necesitan?
+
+¿A quién se informará?
+
+¿Estoy respondiendo la pregunta que se está haciendo?
+
+¿Con qué rapidez hay que tomar una decisión?
+
+Preguntar: Desafío empresarial/objetivo/pregunta
+
+Preparar: Generación, recopilación, almacenamiento y administración de datos
+
+Procesar: Limpieza de datos/integridad de datos
+
+Analizar: Exploración, visualización y análisis de datos
+
+Compartir: Comunicación e interpretación de los resultados 
+
+Actuar:  Uso de tus conocimientos para resolver el problema
+
+___________________________________________________________________________________________________________
+
+os cinco aspectos esenciales de las destrezas analíticas:
+1. Curiosidad
+2. Comprensión del contexto
+3. Mentalidad técnica
+4. Diseño de datos 
+5. Estrategia de datos.
+
+->
+Curiosidad: el deseo de saber más sobre algo y formular las preguntas correctas
+
+Comprensión del contexto: comprender dónde encaja la información en el “panorama general”
+
+Mentalidad técnica: dividir las cosas grandes en pasos más pequeños
+
+Diseño de datos: pensar en cómo organizar los datos y la información
+
+Estrategia de datos: pensar en las personas, los procesos y las herramientas que se utilizan en el análisis de datos 
+
+__________________________________________________________________________________________________________________

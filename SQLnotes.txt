@@ -1,0 +1,163 @@
+SQL NOTES
+
+OPERATORS:
+
+Diferent- <>
+
+- Often your results will include many duplicate values. If you want to select all the unique values from a column, you can use the DISTINCT keyword.
+
+SELECT DISTINCT language
+FROM films;
+
+
+- What if you want to count the number of employees in your employees table? The COUNT() function lets you do this by returning the number of rows in one or more columns.
+SELECT COUNT(*)
+FROM people;
+
+-> IT COUNTS ALL THE RECORD IN THAT TABLE
+
+- if you want to count the number of non-missing values in a particular column, you can call COUNT() on just that column.
+SELECT COUNT(birthdate)
+FROM people;
+
+THIS WILL SHOW THE COUNT OF NON NULL RECORS
+
+U ALSO CAN USE:
+SELECT COUNT(DISTINCT birthdate)
+FROM people;
+
+TO GET THE NUMBER F DISTINCT VALUES IN A COLUMN
+
+--- Examples---
+SELECT * FROM students WHERE name = 'frida';
+SELECT COUNT(*) FROM students WHERE math3_grade = '10';
+SELECT COUNT( DISTINCT name) FROM names;
+SELECT name, age FROM students WHERE age > 20;
+
+_______________________________________________________________________
+If you want to search for a pattern rather than a specific text string.
+
+In SQL, the LIKE operator can be used in a WHERE clause to search for a pattern in a column. To accomplish this, you use something called a wildcard as a placeholder for some other values. There are two wildcards you can use with LIKE:
+
+The % wildcard will match zero, one, or many characters in text. For example, the following query matches companies like 'Data', 'DataC' 'DataCamp', 'DataMind', and so on:
+
+SELECT name
+FROM companies
+WHERE name LIKE 'Data%';
+
+_____________________________________________________________________________
+To order results in descending order, you can put the keyword DESC after your ORDER BY. For example, to get all the names in the people table, in reverse alphabetical order:
+
+SELECT name
+FROM people
+ORDER BY name DESC;
+
+OR LIEVE '_R' TO SEARCH FOR VALUES WITH R IN THE 2ND CARACHTER?? CARACTER
+
+
+YOU ALSO CAN COMBINE WITH NULL OR NOT NULL:
+
+---Example---
+SELECT name FROM people WHERE name LIKE '%A';
+SELECT name FROM people WHERE name LIKE '_RR';
+SELECT name FROM people WHERE name NOT LIKE '%F';
+SELECT name FROM people WHERE name NOT LIKE '_O'; 
+_____________________________________________________________________________________________
+
+-> Aggregate Functions
+
+SELECT AVG(budget) FROM films;
+SELECT MAX(budget) FROM films;
+SELECT SUM(budget) FROM films;
+SELECT MIN(budget) FROM films;
+
+_________________________________________________________________
+ORDER FOR FUNCIONS
+
+SELECT ___(___) * 100.0 / ___(___) AS percentage_dead
+FROM ___;
+
+___________________________________________________________________
+n SQL, the ORDER BY keyword is used to sort results in ascending or descending order according to the values of one or more columns.
+
+By default ORDER BY will sort in ascending order. If you want to sort the results in descending order, you can use the DESC keyword. For example,
+
+SELECT title
+FROM films
+ORDER BY release_year DESC;
+
+____________________________________________________________________
+
+TO SELECT VALUES BETWEEN A SET OF INDICATORS:
+
+ROW -> release_year IN (2000, 2012)
+
+---Example---
+SELECT title, release_year FROM films WHERE release_year IN(2000, 2012) ORDER BY release_year;
+SELECT * FROM films WHERE release_year <> 2015 ORDER BY duration;
+
+_______________________________________________________________________________
+
+ORDER BY can also be used to sort on multiple columns. It will sort by the first column specified, then sort by the next, then the next, and so on. For example,
+
+SELECT birthdate, name
+FROM people
+ORDER BY birthdate, name;
+sorts on birth dates first (oldest to newest) and then sorts on the names in alphabetical order. The order of columns is important!
+
+Try using ORDER BY to sort multiple columns! Remember, to specify multiple columns you separate the column names with a comma.
+
+SELECT title, release_year FROM films ORDER BY (release_year, title);
+
+***SQL will return an error if you try to SELECT a field that is not in your GROUP BY clause without using it to calculate some kind of value about the entire group.***
+SELECT sex, count(*)
+FROM employees
+GROUP BY sex
+ORDER BY count DESC;
+
+ORDER BY always goes after GROUP BY
+
+---Ejemplos---
+SELECT release_year, MAX(budget) FROM films GROUP BY release_year
+SELECT language, SUM(gross) FROM films GROUP BY language
+
+_____________________________________________________________________________
+
+n SQL, aggregate functions can't be used in WHERE clauses. For example, the following query is invalid:
+
+SELECT release_year
+FROM films
+GROUP BY release_year
+WHERE COUNT(title) > 10; EN VEZ DE ESTO SE USA HAVING ->
+
+->
+SELECT release_year
+FROM films
+GROUP BY release_year
+HAVING COUNT(title) > 10
+
+---Example---
+Now you're going to write a query that returns the average budget and average gross earnings for films in each year after 1990, if the average budget is greater than $60 million.
+
+SELECT release_year, AVG(budget) AS avg_budget, AVG(gross) AS avg_gross
+FROM films
+WHERE release_year > 1990
+GROUP BY release_year
+HAVING AVG(budget) > 60000000
+ORDER BY AVG(gross) DESC
+
+
+--- other example---
+1. Return the language, total budget (aliased as total_budget), and total gross (aliased as total_gross) from the films table.
+2. Filter the records for films with a duration greater than 90.
+3. Only include languages where the total gross is over 1 million (1000000).
+4. Order your results by the total gross in descending order.
+
+->
+SELECT language, SUM(budget) AS total_budget, SUM(gross) AS total_gross 
+FROM cinema.films
+WHERE (duration > 90) 
+GROUP BY language
+HAVING SUM(gross) > 1000000
+ORDER BY SUM(gross) DESC
+LIMIT 5
